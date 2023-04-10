@@ -53,15 +53,16 @@ const Statistics = () => {
   ];
 
   return (
-    <div className="mt-10">
+    <div>
+      <h2 className="my-10 text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-[#9873FF] to-[#7E90FE]">Assignment Analytics</h2>
       <AreaChart
         width={1200}
         height={400}
         data={assignmentMarks}
         margin={{
-            top: 10,
-            right: 30,
-            left: 0,
+            top: 20,
+            right: 10,
+            left: 50,
             bottom: 0,
           }}
       >
