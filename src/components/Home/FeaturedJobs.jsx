@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FeaturedItem from "./FeaturedItem";
+import { useLoaderData } from "react-router-dom";
 
 const FeaturedJobs = () => {
-  const [jobs, setJobs] = useState([]);
-
-  useEffect(()=>{
-    fetch('featured-job.json')
-    .then(res => res.json())
-    .then(data => setJobs(data))
-  },[])
+  const jobs = useLoaderData();
 
   return (
     <div className="px-14">

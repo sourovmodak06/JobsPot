@@ -1,8 +1,9 @@
 import React from "react";
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
-const FeaturedItem = ({ job }) => {
-  const { logo, title, company, location, salary, time, placement } = job;
+const FeaturedItem = (props) => {
+  const { logo, title, company, location, salary, time, placement } = props.job;
+  
   return (
     <div className="p-[2px] bg-[#75757541] rounded-lg hover:bg-gradient-to-l from-[#7E90FE] to-[#9873FF]">
       <div className="p-10 w-full h-full bg-white rounded-lg">
