@@ -1,8 +1,9 @@
 import React from "react";
-import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid';
+import { Link } from "react-router-dom";
 
-const FeaturedItem = (props) => {
-  const { logo, title, company, location, salary, time, placement } = props.job;
+const FeaturedItem = ({job}) => {
+  const { logo, title, company, location, salary, time, placement, id } = job;
   
   return (
     <div className="p-[2px] bg-[#75757541] rounded-lg hover:bg-gradient-to-l from-[#7E90FE] to-[#9873FF]">
@@ -36,7 +37,9 @@ const FeaturedItem = (props) => {
             <h4 className="text-xl font-semibold">{salary}</h4>
           </div>
         </div>
-        <button className="mt-7 bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 px-4 text-xl font-extrabold rounded-lg">View Details</button>
+        <button className="mt-7 bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 px-4 text-xl font-extrabold rounded-lg">
+          <Link to={`/job/${id}`}>View Details</Link>
+          </button>
       </div>
     </div>
   );
