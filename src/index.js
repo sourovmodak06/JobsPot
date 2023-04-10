@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Main from './components/Main';
 import Home from './components/Home/Home';
+import Statistics from './components/Statistics/Statistics';
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'statistics',
-        element: <h2>Statistics</h2>
+        element: <Statistics></Statistics>
       },
       {
         path: 'appliedJobs',
