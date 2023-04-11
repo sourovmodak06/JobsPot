@@ -32,8 +32,8 @@ const JobDetails = () => {
   return (
     <div>
       <h1 className="text-center py-20 text-3xl font-extrabold bg-gradient-to-l from-[#7e90fe0d] to-[#9873ff0d]">Job Details</h1>
-      <div className="flex gap-6 px-14 mt-10">
-        <div className="w-[800px]">
+      <div className="flex flex-col md:flex-row gap-6 px-6 md:px-14 mt-10">
+        <div className="md:w-[800px]">
           <h2>
             <span className="font-extrabold text-[#1A1919]">
               Job Description:
@@ -63,7 +63,7 @@ const JobDetails = () => {
               Job Details
             </h2>
             <div className="h-[1px] bg-gradient-to-l from-[#7e8ffe8a] to-[#9873ff8e] my-6"></div>
-            <div className="flex items-center">
+            <div className="flex md:items-center">
               <CurrencyDollarIcon className="w-6 h-6 mr-2 text-purple-700" />
               <h2 className="text-xl">
                 <span className="text-[#474747] font-bold">Salary : </span>
@@ -72,7 +72,7 @@ const JobDetails = () => {
                 </span>
               </h2>
             </div>
-            <div className="flex items-center pt-4 pb-7">
+            <div className="flex md:items-center pt-4 pb-7">
               <CalendarDaysIcon className="w-6 h-6 mr-2 text-purple-700" />
               <h2 className="text-xl">
                 <span className="text-[#474747] font-bold">Job Title : </span>
@@ -83,22 +83,22 @@ const JobDetails = () => {
               Contact Information
             </h2>
             <div className="h-[1px] bg-gradient-to-l from-[#7e8ffe8a] to-[#9873ff8e] my-6"></div>
-            <div className="flex items-center">
+            <div className="flex md:items-center">
               <PhoneIcon className="w-6 h-6 mr-2 text-purple-700" />
               <h2 className="text-xl">
                 <span className="text-[#474747] font-bold">Phone : </span>
                 <span className="text-[#757575] font-medium">{phone}</span>
               </h2>
             </div>
-            <div className="flex items-center">
-              <EnvelopeIcon className="w-6 h-6 mr-2 text-purple-700" />
+            <div className="flex md:items-center">
+              <EnvelopeIcon className="w-6 h-6 mr-2 text-purple-700 my-4 md:my-0" />
               <h2 className="text-xl py-4">
                 <span className="text-[#474747] font-bold">Email : </span>
                 <span className="text-[#757575] font-medium">{email}</span>
               </h2>
             </div>
             <div className="flex">
-              <MapPinIcon className="w-6 h-6 mr-2 text-purple-700" />
+              <MapPinIcon className="w-10 md:w-6 h-6 mr-2 text-purple-700" />
               <h2>
                 <span className="text-[#474747] font-bold text-lg">Address : </span>
                 <span className="text-[#757575] font-medium">{address}</span>

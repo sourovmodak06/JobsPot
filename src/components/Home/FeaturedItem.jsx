@@ -27,12 +27,12 @@ const FeaturedItem = ({job}) => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="md:flex items-center md:gap-6">
           <div className="flex items-center text-[#757575]">
             <MapPinIcon className="h-6 w-6 mr-2" />
             <h4 className="text-xl font-semibold">{location}</h4>
           </div>
-          <div className="flex items-center text-[#757575]">
+          <div className="flex items-center pt-5 md:pt-0 text-[#757575]">
             <CurrencyDollarIcon className="h-6 w-6 mr-2"/>
             <h4 className="text-xl font-semibold">{salary}</h4>
           </div>

@@ -3,10 +3,10 @@ import personImg from '../../images/P3OLGJ1 copy 1.png';
 
 const HomeHeader = () => {
   return (
-    <div className="flex justify-between gap-5 px-14 bg-gradient-to-l from-[#7e90fe0d] to-[#9873ff0d]">
-      <div className="w-[35%]">
+    <div className="flex flex-col md:flex-row justify-between gap-5 px-6 md:px-14 bg-gradient-to-l from-[#7e90fe0d] to-[#9873ff0d]">
+      <div className="md:w-[35%]">
         <h2 className="text-6xl font-extrabold leading-snug">
-          One Step Closer To Your{" "}
+          One Step Closer To Your {" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#9873FF] to-[#7E90FE]">
             Dream Job
           </span>
@@ -21,7 +21,7 @@ const HomeHeader = () => {
         </button>
       </div>
       <div>
-        <img className="h-[450px]" src={personImg} alt="Person-Img" />
+        <img className="md:h-[450px]" src={personImg} alt="Person-Img" />
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
+  ResponsiveContainer,
 } from "recharts";
 
 const Statistics = () => {
@@ -53,25 +54,33 @@ const Statistics = () => {
   ];
 
   return (
-    <div>
-      <h2 className="my-10 text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-[#9873FF] to-[#7E90FE]">Assignment Analytics</h2>
-      <AreaChart
-        width={1200}
-        height={400}
-        data={assignmentMarks}
-        margin={{
-            top: 20,
-            right: 10,
-            left: 50,
+    <div className="px-6 md:px-14">
+      <h2 className="my-10 text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-[#9873FF] to-[#7E90FE]">
+        Assignment Analytics
+      </h2>
+      <ResponsiveContainer width="100%" height={300}>
+        <AreaChart
+          data={assignmentMarks}
+          margin={{
+            top: 30,
+            right: 30,
+            left: 0,
             bottom: 0,
           }}
-      >
-        <CartesianGrid strokeDasharray="2 2" />
-        <XAxis dataKey="title" />
-        <YAxis />
-        <Tooltip />
-        <Area type="monotone" dataKey="mark" stroke="#9873FF" fill="#9873FF" activeDot={{ r: 8 }} />
-      </AreaChart>
+        >
+          <CartesianGrid strokeDasharray="2 2" />
+          <XAxis dataKey="title" />
+          <YAxis />
+          <Tooltip />
+          <Area
+            type="monotone"
+            dataKey="mark"
+            stroke="#9873FF"
+            fill="#9873FF"
+            activeDot={{ r: 8 }}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
     </div>
   );
 };

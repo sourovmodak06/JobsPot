@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Cart = ({ jobCart }) => {
   const { logo, title, company, placement, time, location, salary,id } = jobCart;
   return (
-    <div className="flex justify-between items-center border-2 my-6 p-7 rounded-lg">
-      <div className="flex items-center gap-8">
+    <div className="flex flex-col md:flex-row justify-between items-center border-2 my-6 p-4 md:p-7 rounded-lg">
+      <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="bg-[#F4F4F4] py-24 px-12 rounded-lg">
           <img src={logo} alt="Company logo" />
         </div>
@@ -29,19 +29,19 @@ const Cart = ({ jobCart }) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="md:flex items-center gap-6">
             <div className="flex items-center text-[#757575]">
               <MapPinIcon className="h-6 w-6 mr-2" />
               <h4 className="text-xl font-semibold">{location}</h4>
             </div>
-            <div className="flex items-center text-[#757575]">
+            <div className="flex items-center text-[#757575] py-5 md:py-0">
               <CurrencyDollarIcon className="h-6 w-6 mr-2" />
               <h4 className="text-xl font-semibold">{salary}</h4>
             </div>
           </div>
         </div>
       </div>
-      <button className="bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 px-4 text-xl font-extrabold rounded-lg">
+      <button className="bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 px-4 text-xl font-extrabold rounded-lg my-5">
         <Link to={`/job/${id}`}>View Details</Link>
       </button>
     </div>
