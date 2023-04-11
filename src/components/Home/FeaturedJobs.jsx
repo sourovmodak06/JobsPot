@@ -7,7 +7,6 @@ const FeaturedJobs = () => {
   const [showAll, setShowAll] = useState(false);
 
   const allJobs = () => {
-    console.log("jiiii");
     setShowAll(true);
   };
 
