@@ -32,7 +32,7 @@ const JobDetails = () => {
   return (
     <div>
       <h1 className="text-center py-20 text-3xl font-extrabold bg-gradient-to-l from-[#7e90fe0d] to-[#9873ff0d]">Job Details</h1>
-      <div className="flex flex-col md:flex-row gap-6 px-6 md:px-14 mt-10">
+      <div className="flex flex-col md:flex-row justify-between gap-6 px-6 md:px-14 mt-10">
         <div className="md:w-[800px]">
           <h2>
             <span className="font-extrabold text-[#1A1919]">
