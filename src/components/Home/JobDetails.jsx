@@ -7,6 +7,7 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from "@heroicons/react/24/solid";
+import { addToDb } from "../../fakedb";
 
 const JobDetails = () => {
   const detailId = useParams();
@@ -23,8 +24,13 @@ const JobDetails = () => {
     email,
     address,
   } = jobDetail;
+
+  const addToDetails = (jobDetail) =>{
+    addToDb(jobDetail.id);
+  }
+
   return (
-    <div className="">
+    <div>
       <h1 className="text-center py-20 text-3xl font-extrabold bg-gradient-to-l from-[#7e90fe0d] to-[#9873ff0d]">Job Details</h1>
       <div className="flex gap-6 px-14 mt-10">
         <div className="w-[800px]">
@@ -99,7 +105,7 @@ const JobDetails = () => {
               </h2>
             </div>
           </div>
-          <button className="bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 text-xl font-extrabold rounded-lg w-full mt-6">
+          <button onClick={()=> addToDetails(jobDetail)} className="bg-gradient-to-l from-[#7E90FE] to-[#9873FF] text-white py-2 text-xl font-extrabold rounded-lg w-full mt-6">
             Apply Now
           </button>
         </div>
